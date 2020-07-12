@@ -1,0 +1,32 @@
+name: adrest-workflow
+
+on: [push]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install Nodejs
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Install nodejs dependencies
+        run: |
+          npm
+      - name: Run NPM install
+        run: |
+          npm install
+      - name: commit
+        run: |
+          git config --local user.name "fauzan121002"
+          git config --local user.email "zanscoffinn@gmail.com"
+          git add .
+          git commit -m ":tada: Set up workflows"
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.CI }}
+          branch: "master"
+          repository: "fauzan121002/adrest.js"
