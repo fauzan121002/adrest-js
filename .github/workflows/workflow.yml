@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Prepare repository
-        run: git checkout "${GITHUB_REF:11}"
+        run: "git checkout "${GITHUB_REF:11}"
       - name: Install Nodejs
         uses: actions/setup-node@v1
         with:
