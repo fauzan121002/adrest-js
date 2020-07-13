@@ -10,5 +10,9 @@
   "license": "LGPL-3.0",
   "dependencies": {
     "gh-pages": "^3.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-minify": "^3.1.0"
   }
 }

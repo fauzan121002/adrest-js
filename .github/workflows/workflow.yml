@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - name: Prepare repository
+        run: git checkout "${GITHUB_REF:11}"
       - name: Install Nodejs
         uses: actions/setup-node@v1
         with:
@@ -15,12 +17,24 @@ jobs:
       - name: Run NPM install
         run: |
           npm install
+      - name: Install global gulp
+        run: |
+          npm i --global gulp-cli
+      - name: Install gulp
+        run: |
+          npm i gulp --save-dev
+      - name: Install gulp minify plugin
+        run: |
+          npm i --save-dev gulp-minify
+      - name: Run gulp
+        run: |
+          gulp
       - name: commit
         run: |
           git config --local user.name "fauzan121002"
           git config --local user.email "zanscoffinn@gmail.com"
           git add .
-          git commit -m ":tada: Done workflows"
+          git commit -m "Done workflows"
       - name: Push
         uses: ad-m/github-push-action@master
         with:
