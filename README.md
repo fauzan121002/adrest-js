@@ -44,11 +44,11 @@ index.html
 
 header.html
 
-<h1>Header</h1>
+`<h1>Header</h1>`
 
 footer.html
 
-<h1>Footer</h1>
+`<h1>Footer</h1>`
 
 ## Usage
 
