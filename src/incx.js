@@ -20,18 +20,28 @@ for (let tag of tags) {
       })
     );
   } else {
-    let oldContent = tag.innerHTML;
-    tag.innerHTML = "";
     fetchChain.push(
       new Promise((resolve, reject) => {
-        resolve(oldContent);
+        resolve(tag.innerHTML);
       })
     );
   }
 }
 
 Promise.all(fetchChain).then((values) => {
-  for (value of values) !app || app.insertAdjacentHTML("beforebegin", value);
+  for (value of values) {
+    if (app) app.insertAdjacentHTML("beforebegin", value);
+    else document.body.insertAdjacentHTML("beforeend", value);
+  }
+
+  // remove() was not fully supported
+  // https://caniuse.com/?search=remove
+  // meanwhile removeChild()
+  // https://caniuse.com/?search=removeChild
+  !app || app.parentNode.removeChild(app);
+  while (tags[0]) {
+    tags[0].parentNode.removeChild(tags[0]);
+  }
 });
 
 for (let tag of extendTags) {
@@ -42,11 +52,11 @@ for (let tag of extendTags) {
       .then((html) => {
         let htmlElement = document.createElement("html");
 
-        let htmlReset = htmlElement;
-        htmlReset.innerHTML = html.outerHTML;
+        let resetHtml = htmlElement;
+        resetHtml.innerHTML = html;
 
         let lastHtml = htmlElement;
-        lastHtml.innerHTML = htmlReset.innerHTML;
+        lastHtml.innerHTML = resetHtml.innerHTML;
         document.head.innerHTML =
           lastHtml.getElementsByTagName("head")[0].innerHTML;
         tag.innerHTML = lastHtml.getElementsByTagName("body")[0].innerHTML;
