@@ -1,14 +1,13 @@
 {
-  "name": "adrest-html-library-to-extend-your-html-layout",
+  "name": "incx.js",
   "version": "1.0.0",
-  "description": "HTML Library to extend your HTML layout.",
-  "main": "index.js",
+  "description": "Include and Extends your HTML tags into seperate HTML files.",
   "scripts": {
     "build": "node ./node_modules/gulp/bin/gulp.js",
     "deploy": "gh-pages -d dist"
   },
   "author": "Muhammad Fauzan",
-  "license": "LGPL-3.0",
+  "license": "MIT",
   "dependencies": {
     "gh-pages": "^3.1.0"
   },
