@@ -4,6 +4,7 @@
   "description": "HTML Library to extend your HTML layout.",
   "main": "index.js",
   "scripts": {
+    "build": "node ./node_modules/gulp/bin/gulp.js",
     "deploy": "gh-pages -d dist"
   },
   "author": "Muhammad Fauzan",
