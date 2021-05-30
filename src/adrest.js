@@ -1,6 +1,6 @@
 let tags = document.getElementsByTagName("include");
 let extendTags = document.getElementsByTagName("extends");
-let app = document.getElementById("adrest");
+let app = document.getElementById("incx");
 let fetchChain = [];
 
 for (let tag of tags) {
