@@ -32,7 +32,7 @@ jobs:
       - name: commit
         run: |
           git config --local user.name "fauzan121002"
-          git config --local user.email "zanscoffinn@gmail.com"
+          git config --local user.email "developerfauzan@gmail.com"
           git add .
           git commit -m "Done workflows"
       - name: Push
