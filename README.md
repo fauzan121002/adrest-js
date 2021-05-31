@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./dist/incx.gif"></img>
+    <img src="https://github.com/fauzan121002/incx.js/blob/master/dist/IncX.gif"></img>
 </p>
 
 <p align="center">
@@ -67,4 +67,4 @@ The extends function is useful for extending files from master file to the file 
 
 ## License
 
-IncX is licensed under [MIT License](./LICENSE)
+**IncX.js** is licensed under [MIT License](./LICENSE)
