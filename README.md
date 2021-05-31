@@ -51,7 +51,7 @@ You need attached mode to include script that you don't want to split in other f
 </include>
 ```
 
-## Extends
+### Extends
 
 The extends function is useful for extending files from master file to the file that wrap things up.
 
