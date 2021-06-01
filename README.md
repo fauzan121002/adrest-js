@@ -25,6 +25,14 @@
 <script src="https://cdn.jsdelivr.net/npm/incx.js/dist/incx-min.js"></script>
 ```
 
+If you want **IncX.js** to affect inside it's scope (not document.body), use the featuring tags inside this code :
+
+```html
+<div id="incx">
+  <!-- featuring tags.. -->
+</div>
+```
+
 **Note** : paste it upper `</body>` tag.
 
 ## Featuring Tags
