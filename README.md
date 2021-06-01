@@ -25,6 +25,8 @@
 <script src="https://cdn.jsdelivr.net/npm/incx.js/dist/incx-min.js"></script>
 ```
 
+**Note** : paste it upper `</body>` tag.
+
 If you want **IncX.js** to affect inside it's scope (not document.body), use the featuring tags inside this code :
 
 ```html
@@ -32,8 +34,6 @@ If you want **IncX.js** to affect inside it's scope (not document.body), use the
   <!-- featuring tags.. -->
 </div>
 ```
-
-**Note** : paste it upper `</body>` tag.
 
 ## Featuring Tags
 
